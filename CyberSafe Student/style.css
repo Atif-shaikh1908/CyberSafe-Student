@@ -1,0 +1,646 @@
+/* ================================
+   CyberSafe Student
+   Main Website Styles
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   Navigation
+================================ */
+
+.navbar {
+    width: 100%;
+    min-height: 72px;
+    padding: 18px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #081525;
+    border-bottom: 1px solid #1d344d;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.nav-links a.active {
+    color: #38bdf8;
+}
+
+
+/* ================================
+   Hero
+================================ */
+
+.hero {
+    min-height: 650px;
+
+    padding: 90px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(14, 165, 233, 0.16),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #07111f,
+            #0a1728
+        );
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+
+/* Small hero label */
+
+.hero-tag {
+    color: #38bdf8;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Hero heading */
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+
+/* Hero paragraph */
+
+.hero-content > p:not(.hero-tag) {
+    max-width: 650px;
+
+    color: #a8b7c9;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================================
+   Hero Buttons
+================================ */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+
+
+/* ================================
+   Buttons
+================================ */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    border-radius: 8px;
+
+    border: 1px solid #38bdf8;
+
+    background: #0f2940;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #38bdf8;
+
+    color: #06111f;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   Hero Shield
+================================ */
+
+.hero-shield {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shield {
+    width: 250px;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #1e4d70;
+
+    border-radius: 50%;
+
+    font-size: 110px;
+
+    background: rgba(14, 165, 233, 0.05);
+
+    box-shadow:
+        0 0 50px rgba(14, 165, 233, 0.12);
+
+    animation: floatingShield 4s ease-in-out infinite;
+}
+
+@keyframes floatingShield {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ================================
+   Intro
+================================ */
+
+.intro {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 100px 6%;
+
+    text-align: center;
+}
+
+.intro h2,
+.topics h2,
+.project-flow h2,
+.survey-section h2 {
+    font-size: clamp(30px, 4vw, 48px);
+
+    margin-bottom: 20px;
+}
+
+.intro p {
+    color: #a8b7c9;
+
+    font-size: 17px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ================================
+   Topics
+================================ */
+
+.topics {
+    padding: 80px 6%;
+
+    background: #091827;
+
+    text-align: center;
+}
+
+.topic-grid {
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* Topic Cards */
+
+.topic-card {
+    display: block;
+
+    text-align: left;
+
+    padding: 30px;
+
+    background: #0d1d2e;
+
+    border: 1px solid #1d344d;
+
+    border-radius: 14px;
+
+    color: #f1f5f9;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.topic-card h3 {
+    color: #ffffff;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.topic-card p {
+    color: #cbd5e1;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   Project Flow
+================================ */
+
+.project-flow {
+    padding: 100px 6%;
+
+    text-align: center;
+}
+
+.flow-grid {
+    max-width: 1100px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Flow Cards */
+
+.flow-card {
+    padding: 28px 20px;
+
+    background: #0b1929;
+
+    border: 1px solid #1d344d;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.flow-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #38bdf8;
+}
+
+.flow-card span {
+    display: block;
+
+    color: #38bdf8;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.flow-card h3 {
+    margin-bottom: 10px;
+}
+
+.flow-card p {
+    color: #94a6b8;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   Survey Section
+================================ */
+
+.survey-section {
+    margin: 30px 6% 100px;
+
+    padding: 65px;
+
+    border: 1px solid #1d4b68;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(14, 165, 233, 0.10),
+            rgba(15, 23, 42, 0.8)
+        );
+
+    text-align: center;
+}
+
+.survey-section p {
+    color: #a8b7c9;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   Quiz Support
+================================ */
+
+.quiz-container {
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    gap: 20px;
+}
+
+.quiz-container .topic-card {
+    text-align: left;
+}
+
+.quiz-container label {
+    display: inline-block;
+
+    margin: 7px 0;
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+}
+
+.quiz-container input {
+    margin-right: 8px;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+    padding: 45px 6%;
+
+    text-align: center;
+
+    background: #050d18;
+
+    border-top: 1px solid #1d344d;
+}
+
+footer p {
+    color: #8192a5;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+footer .copyright {
+    font-size: 12px;
+}
+
+
+/* ================================
+   Footer Links
+================================ */
+
+footer a {
+    color: #38bdf8;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding-top: 70px;
+    }
+
+    .shield {
+        width: 190px;
+        height: 190px;
+
+        font-size: 80px;
+    }
+
+    .topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-content > p:not(.hero-tag) {
+        font-size: 16px;
+    }
+
+    .shield {
+        width: 150px;
+        height: 150px;
+
+        font-size: 65px;
+
+        align-self: center;
+    }
+
+    .intro,
+    .topics,
+    .project-flow {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .survey-section {
+        margin: 10px 5% 70px;
+
+        padding: 35px 25px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
